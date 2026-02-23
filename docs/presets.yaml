@@ -1,0 +1,5 @@
+default:
+  product_name: "SanCRM"
+  product_full_name: "SanCRM — CRM для сервисных центров"
+  support_email: "support@sancrm.ru"
+  docs_url: "https://docs.sancrm.ru"

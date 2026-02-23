@@ -1,0 +1,25 @@
+# Enable key YFM rules as warnings
+log-levels:
+  MD001: "warn"       # heading levels increment by one
+  MD003: "warn"       # heading style
+  MD004: "warn"       # unordered list style
+  MD005: "warn"       # list indentation
+  MD007: "warn"       # unordered list indentation
+  MD009: "warn"       # trailing spaces
+  MD010: "warn"       # hard tabs
+  MD012: "warn"       # multiple blank lines
+  MD018: "warn"       # no space after hash on heading
+  MD019: "warn"       # multiple spaces after hash
+  MD022: "warn"       # headings should be surrounded by blank lines
+  MD023: "warn"       # headings must start at beginning of line
+  MD025: "warn"       # single h1 per document
+  MD027: "warn"       # multiple spaces after blockquote symbol
+  MD029: "warn"       # ordered list item prefix
+  MD030: "warn"       # spaces after list markers
+  MD032: "warn"       # lists should be surrounded by blank lines
+  MD033: "disabled"   # inline HTML (we allow it)
+  MD034: "warn"       # bare URLs
+  MD046: "warn"       # code block style
+  YFM001: "warn"      # inline code length
+  YFM002: "warn"      # header anchors
+  YFM003: "warn"      # table not closed

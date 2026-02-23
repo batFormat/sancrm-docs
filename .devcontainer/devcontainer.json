@@ -1,0 +1,17 @@
+{
+  "hostRequirements": { "cpus": 4 },
+  "updateContentCommand": "npm install",
+  "postAttachCommand": { "server": "npm start" },
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["docs/index.yaml", "docs/toc.yaml"]
+    }
+  },
+  "portsAttributes": {
+    "8000": {
+      "label": "SanCRM Docs Preview",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [8000]
+}

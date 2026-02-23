@@ -3,3 +3,6 @@ langs:
   - ru
 docs-viewer:
   project-name: SanCRM
+lint:
+  enabled: true
+  config: .yfmlint

@@ -1,4 +1,5 @@
 title: FAQ
+href: index.yaml
 items:
   - name: Частые вопросы
     href: common-questions.md

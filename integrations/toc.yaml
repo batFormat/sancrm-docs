@@ -1,4 +1,5 @@
 title: Интеграции
+href: index.yaml
 items:
   - name: Telegram-бот
     href: telegram.md

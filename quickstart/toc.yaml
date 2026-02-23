@@ -1,4 +1,5 @@
 title: Быстрый старт
+href: index.yaml
 items:
   - name: Регистрация и вход
     href: registration.md

@@ -1,4 +1,5 @@
 title: Склад
+href: index.yaml
 items:
   - name: Обзор
     href: overview.md

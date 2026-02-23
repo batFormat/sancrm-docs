@@ -1,4 +1,5 @@
 title: Аналитика
+href: index.yaml
 items:
   - name: Дашборд
     href: dashboard.md

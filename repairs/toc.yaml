@@ -1,4 +1,5 @@
 title: Ремонты
+href: index.yaml
 items:
   - name: Обзор
     href: overview.md

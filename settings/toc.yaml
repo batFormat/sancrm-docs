@@ -1,0 +1,22 @@
+title: Настройки
+items:
+  - name: Организация
+    href: organization.md
+  - name: Филиалы
+    href: branches.md
+  - name: Пользователи и роли
+    href: users-roles.md
+  - name: Статусы ремонта
+    href: statuses.md
+  - name: Workflow
+    href: workflow.md
+  - name: Шаблоны документов
+    href: templates.md
+  - name: Категории и бренды
+    href: categories-brands.md
+  - name: Склады
+    href: warehouses.md
+  - name: Поставщики
+    href: suppliers.md
+  - name: Справочники подсказок
+    href: suggestions.md

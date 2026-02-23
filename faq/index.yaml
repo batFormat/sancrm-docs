@@ -1,0 +1,6 @@
+title: FAQ
+description: Ответы на частые вопросы по работе с SanCRM
+links:
+  - title: Частые вопросы
+    description: Ответы на популярные вопросы по всем разделам системы
+    href: common-questions.md

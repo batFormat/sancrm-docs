@@ -1,0 +1,6 @@
+title: Интеграции
+items:
+  - name: Telegram-бот
+    href: telegram.md
+  - name: Публичная проверка статуса
+    href: public-status.md

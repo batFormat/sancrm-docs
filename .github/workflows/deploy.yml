@@ -23,6 +23,9 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.TIMEWEB_S3_SECRET_KEY }}
           AWS_DEFAULT_REGION: ru-1
         run: |
-          aws s3 sync _build/ s3://${{ secrets.TIMEWEB_S3_BUCKET }} \
-            --endpoint-url https://s3.timeweb.cloud \
-            --delete
+          aws s3 rm s3://${{ secrets.TIMEWEB_S3_BUCKET }} \
+            --endpoint-url https://s3.twcstorage.ru \
+            --recursive
+          aws s3 cp _build/ s3://${{ secrets.TIMEWEB_S3_BUCKET }} \
+            --endpoint-url https://s3.twcstorage.ru \
+            --recursive

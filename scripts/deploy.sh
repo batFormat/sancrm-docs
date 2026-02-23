@@ -22,6 +22,7 @@ fi
 
 export AWS_ACCESS_KEY_ID="$S3_ACCESS_KEY"
 export AWS_SECRET_ACCESS_KEY="$S3_SECRET_KEY"
+export AWS_DEFAULT_REGION="ru-1"
 
 if [ ! -d "$BUILD_DIR" ]; then
   echo "Error: Build directory '$BUILD_DIR' not found. Run 'npm run build' first."

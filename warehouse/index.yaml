@@ -1,0 +1,36 @@
+title: Склад
+description: Управление складом, товарами, документами и ценообразованием в SanCRM.
+meta:
+  title: Склад
+  noIndex: false
+links:
+  - title: Обзор
+    description: Общий обзор складского модуля, мультисклад и учёт остатков.
+    href: overview.md
+  - title: Управление товарами
+    description: Каталог товаров — категории, бренды, артикулы, карточки товаров и цены.
+    href: products.md
+  - title: Складские документы
+    description: Типы складских документов и их назначение.
+    href: stock-documents.md
+  - title: Приход
+    description: Оприходование товаров — создание документа, выбор поставщика, количество.
+    href: posting.md
+  - title: Списание
+    description: Списание товаров — причины, согласование, выбор склада.
+    href: writeoff.md
+  - title: Перемещение
+    description: Перемещение товаров между складами.
+    href: transfer.md
+  - title: Инвентаризация
+    description: Проведение инвентаризации — создание документа, сканирование, расхождения.
+    href: inventory.md
+  - title: Возврат поставщику
+    description: Возврат товаров поставщику — оформление, причина, связь с приходом.
+    href: return.md
+  - title: Типы цен
+    description: Типы цен — розница, опт, ремонтные цены, правила наценки.
+    href: price-types.md
+  - title: Импорт товаров
+    description: Импорт товаров из CSV/Excel — маппинг полей и обработка дубликатов.
+    href: import.md

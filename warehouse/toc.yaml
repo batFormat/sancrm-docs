@@ -1,0 +1,22 @@
+title: Склад
+items:
+  - name: Обзор
+    href: overview.md
+  - name: Управление товарами
+    href: products.md
+  - name: Складские документы
+    href: stock-documents.md
+  - name: Приход
+    href: posting.md
+  - name: Списание
+    href: writeoff.md
+  - name: Перемещение
+    href: transfer.md
+  - name: Инвентаризация
+    href: inventory.md
+  - name: Возврат поставщику
+    href: return.md
+  - name: Типы цен
+    href: price-types.md
+  - name: Импорт товаров
+    href: import.md

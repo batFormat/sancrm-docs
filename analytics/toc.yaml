@@ -1,0 +1,6 @@
+title: Аналитика
+items:
+  - name: Дашборд
+    href: dashboard.md
+  - name: Рентабельность
+    href: profitability.md

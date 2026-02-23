@@ -1,0 +1,10 @@
+title: Прокат
+items:
+  - name: Обзор
+    href: overview.md
+  - name: Управление инструментом
+    href: tools.md
+  - name: Оформление проката
+    href: create-rental.md
+  - name: Договор проката
+    href: rental-contract.md

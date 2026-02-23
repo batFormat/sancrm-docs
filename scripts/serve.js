@@ -11,7 +11,8 @@ const utils = require('parse5-utils');
 
 const glob = require('glob');
 const {debounce} = require('lodash');
-const open = require('open');
+let open;
+import('open').then(m => { open = m.default; });
 
 const watcher = new chokidar.FSWatcher({
   ignored: ['_build/**', 'node_modules/**', '.git/**', '.ai-factory/**'],
@@ -60,6 +61,17 @@ events.addEventListener("${this.configs.sseEventName}", function(e) {
 
   configure() {
     this.app = express();
+
+    // Diplodoc CLI v4.60+ generates hashed bundle references in HTML
+    // (e.g. vendor-14432c0205e2d1bb.css) but outputs unhashed files (vendor.css).
+    // Strip the hash so static serving finds the actual files.
+    this.app.use('/_bundle', (req, res, next) => {
+      req.url = req.url.replace(/^(\/[^/]+)-[0-9a-f]{16}\./, '$1.');
+      next();
+    }, serveStatic(path.join(this.configs.serveDir, '_bundle'), {
+      cacheControl: this.configs.cacheControl,
+    }));
+
     this.app.use(serveStatic(this.configs.serveDir, {
       index: this.configs.serveIndexes,
       cacheControl: this.configs.cacheControl,
@@ -147,7 +159,7 @@ events.addEventListener("${this.configs.sseEventName}", function(e) {
 
     console.info(`serving on: http://localhost:${this.configs.port}/`);
 
-    if (this.configs.autoOpen) {
+    if (this.configs.autoOpen && open) {
       open(`http://localhost:${this.configs.port}/`);
     }
   }

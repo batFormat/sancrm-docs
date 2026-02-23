@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "yfm -i docs -o _build",
-    "deploy": "npm run build && bash scripts/deploy.sh",
+    "deploy": "npm run build && yfm publish -i _build --endpoint https://s3.twcstorage.ru --region ru-1",
     "start": "npm run build && node scripts/serve.js"
   },
   "dependencies": {

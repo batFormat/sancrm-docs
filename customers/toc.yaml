@@ -1,0 +1,10 @@
+title: Клиенты
+items:
+  - name: Обзор
+    href: overview.md
+  - name: Создание клиента
+    href: create-customer.md
+  - name: Чёрный список
+    href: blacklist.md
+  - name: История клиента
+    href: customer-history.md

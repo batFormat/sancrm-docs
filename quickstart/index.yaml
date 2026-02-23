@@ -1,0 +1,12 @@
+title: Быстрый старт
+description: Начните работу с SanCRM за несколько минут
+links:
+  - title: Регистрация и вход
+    description: Как зарегистрироваться и войти в систему
+    href: registration.md
+  - title: Первоначальная настройка
+    description: Настройте организацию, филиалы и роли
+    href: first-setup.md
+  - title: Создание первого ремонта
+    description: Оформите первый заказ на ремонт
+    href: first-repair.md

@@ -1,0 +1,22 @@
+title: Ремонты
+items:
+  - name: Обзор
+    href: overview.md
+  - name: Создание ремонта
+    href: create-repair.md
+  - name: Статусы и переходы
+    href: statuses.md
+  - name: Канбан-доска
+    href: kanban.md
+  - name: Действия Workflow
+    href: workflow-actions.md
+  - name: Запчасти и товары
+    href: spare-parts.md
+  - name: Услуги
+    href: services.md
+  - name: Квитанции и документы
+    href: documents.md
+  - name: Уведомления клиентов
+    href: notifications.md
+  - name: Фильтры и представления
+    href: lenses.md

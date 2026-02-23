@@ -1,0 +1,8 @@
+title: Быстрый старт
+items:
+  - name: Регистрация и вход
+    href: registration.md
+  - name: Первоначальная настройка
+    href: first-setup.md
+  - name: Создание первого ремонта
+    href: first-repair.md

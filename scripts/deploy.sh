@@ -9,10 +9,10 @@ set -euo pipefail
 #   S3_BUCKET      - Bucket name
 #
 # Optional:
-#   S3_ENDPOINT    - S3 endpoint URL (default: https://s3.twcstorage.ru)
+#   S3_ENDPOINT    - S3 endpoint URL (default: https://s3.timeweb.cloud)
 #   BUILD_DIR      - Build output directory (default: _build)
 
-S3_ENDPOINT="${S3_ENDPOINT:-https://s3.twcstorage.ru}"
+S3_ENDPOINT="${S3_ENDPOINT:-https://s3.timeweb.cloud}"
 BUILD_DIR="${BUILD_DIR:-_build}"
 
 if [ -z "${S3_ACCESS_KEY:-}" ] || [ -z "${S3_SECRET_KEY:-}" ] || [ -z "${S3_BUCKET:-}" ]; then
@@ -20,14 +20,29 @@ if [ -z "${S3_ACCESS_KEY:-}" ] || [ -z "${S3_SECRET_KEY:-}" ] || [ -z "${S3_BUCK
   exit 1
 fi
 
-export AWS_ACCESS_KEY_ID="$S3_ACCESS_KEY"
-export AWS_SECRET_ACCESS_KEY="$S3_SECRET_KEY"
-export AWS_DEFAULT_REGION="ru-1"
-
 if [ ! -d "$BUILD_DIR" ]; then
   echo "Error: Build directory '$BUILD_DIR' not found. Run 'npm run build' first."
   exit 1
 fi
+
+# Configure AWS CLI for Timeweb Cloud S3
+mkdir -p ~/.aws
+
+cat > ~/.aws/credentials <<CREDS
+[default]
+aws_access_key_id = $S3_ACCESS_KEY
+aws_secret_access_key = $S3_SECRET_KEY
+CREDS
+
+cat > ~/.aws/config <<CONF
+[default]
+region = ru-1
+s3 =
+  endpoint_url = $S3_ENDPOINT
+  signature_version = s3v4
+s3api =
+  endpoint_url = $S3_ENDPOINT
+CONF
 
 echo "Deploying '$BUILD_DIR' to s3://$S3_BUCKET ..."
 

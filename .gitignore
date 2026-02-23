@@ -2,3 +2,6 @@ node_modules/
 _build/
 .DS_Store
 *.swp
+.idea
+.playwright-mcp
+screenshots/

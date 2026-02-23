@@ -1,0 +1,33 @@
+title: SanCRM — Документация
+description: Документация по работе с системой SanCRM — CRM для сервисных центров и мастерских
+meta:
+  title: SanCRM — Документация
+  noIndex: false
+links:
+  - title: Быстрый старт
+    description: Регистрация, настройка и первый ремонт
+    href: quickstart/
+  - title: Ремонты
+    description: Создание, ведение и отслеживание ремонтов
+    href: repairs/
+  - title: Клиенты
+    description: Управление клиентской базой
+    href: customers/
+  - title: Склад
+    description: Складской учёт, товары и документы
+    href: warehouse/
+  - title: Прокат
+    description: Оформление и учёт проката инструмента
+    href: rental/
+  - title: Аналитика
+    description: Дашборды и отчёты
+    href: analytics/
+  - title: Настройки
+    description: Конфигурация организации, ролей и процессов
+    href: settings/
+  - title: Интеграции
+    description: Telegram-бот и публичная проверка статуса
+    href: integrations/
+  - title: FAQ
+    description: Ответы на частые вопросы
+    href: faq/

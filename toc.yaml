@@ -1,0 +1,39 @@
+title: SanCRM — Документация
+href: index.yaml
+items:
+  - name: Быстрый старт
+    include:
+      path: quickstart/toc.yaml
+      mode: link
+  - name: Ремонты
+    include:
+      path: repairs/toc.yaml
+      mode: link
+  - name: Клиенты
+    include:
+      path: customers/toc.yaml
+      mode: link
+  - name: Склад
+    include:
+      path: warehouse/toc.yaml
+      mode: link
+  - name: Прокат
+    include:
+      path: rental/toc.yaml
+      mode: link
+  - name: Аналитика
+    include:
+      path: analytics/toc.yaml
+      mode: link
+  - name: Настройки
+    include:
+      path: settings/toc.yaml
+      mode: link
+  - name: Интеграции
+    include:
+      path: integrations/toc.yaml
+      mode: link
+  - name: FAQ
+    include:
+      path: faq/toc.yaml
+      mode: link

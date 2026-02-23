@@ -1,0 +1,5 @@
+allowHTML: true
+langs:
+  - ru
+docs-viewer:
+  project-name: SanCRM

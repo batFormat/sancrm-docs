@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Deploy static build to Timeweb Cloud S3 via rclone
+# Deploy static build to Timeweb Cloud S3
 #
 # Required environment variables:
 #   S3_ACCESS_KEY  - Timeweb S3 access key
@@ -25,20 +25,14 @@ if [ ! -d "$BUILD_DIR" ]; then
   exit 1
 fi
 
-if ! command -v rclone &> /dev/null; then
-  echo "Error: rclone is not installed. Install it: https://rclone.org/install/"
-  exit 1
-fi
+export AWS_ACCESS_KEY_ID="$S3_ACCESS_KEY"
+export AWS_SECRET_ACCESS_KEY="$S3_SECRET_KEY"
+export AWS_DEFAULT_REGION="ru-1"
 
-export RCLONE_CONFIG_TW_TYPE=s3
-export RCLONE_CONFIG_TW_PROVIDER=Other
-export RCLONE_CONFIG_TW_ACCESS_KEY_ID="$S3_ACCESS_KEY"
-export RCLONE_CONFIG_TW_SECRET_ACCESS_KEY="$S3_SECRET_KEY"
-export RCLONE_CONFIG_TW_ENDPOINT="$S3_ENDPOINT"
-export RCLONE_CONFIG_TW_REGION=ru-1
+echo "Deploying '$BUILD_DIR' to s3://$S3_BUCKET ..."
 
-echo "Deploying '$BUILD_DIR' to tw:$S3_BUCKET ..."
-
-rclone sync "$BUILD_DIR" "tw:$S3_BUCKET" --verbose
+aws s3 sync "$BUILD_DIR" "s3://$S3_BUCKET" \
+  --endpoint-url "$S3_ENDPOINT" \
+  --delete
 
 echo "Deploy complete."
